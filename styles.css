@@ -1,0 +1,154 @@
+.preview-card-component > section, body, main {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 15px;
+}
+
+body {
+  min-height: 100%;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.75);
+  padding: 96px 24px;
+}
+
+body, button {
+  background-color: hsl(0, 0%, 95%);
+}
+
+body, main {
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  gap: 32px;
+}
+
+.preview-card-component {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.preview-card-component > section {
+  gap: 32px;
+  width: clamp(308px, 80%, 440px);
+  padding: 49px;
+  margin: 0 auto;
+}
+
+#sedans-section {
+  color: hsl(31, 77%, 52%);
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 8px 8px 0 0;
+}
+
+#suvs-section {
+  color: hsl(184, 100%, 22%);
+  background-color: hsl(184, 100%, 22%);
+}
+
+#luxury-section {
+  color: hsl(179, 100%, 13%);
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0 0 8px 8px;
+}
+
+#icon-sedans {
+  background-image: url("images/icon-sedans.svg");
+}
+
+#icon-suvs {
+  background-image: url("images/icon-suvs.svg");
+}
+
+#icon-luxury {
+  background-image: url("images/icon-luxury.svg");
+}
+
+#icon-sedans,
+#icon-suvs,
+#icon-luxury {
+  display: block;
+  width: 64px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+h2 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: hsl(0, 0%, 95%);
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 24px;
+}
+
+button {
+  cursor: pointer;
+  align-self: flex-start;
+  color: inherit;
+  font-size: 1rem;
+  padding: 12px 32px;
+  border: 3px solid hsl(0, 0%, 95%);
+  border-radius: 48px;
+}
+
+.attribution {
+  margin-top: auto;
+  background-color: inherit;
+  color: #000000;
+  text-align: center;
+  padding: 8px;
+  border-radius: 16px;
+  z-index: 0;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 800px) {
+  body {
+    padding: 64px 24px;
+  }
+  .preview-card-component > section {
+    max-width: 308px;
+    height: 500px;
+  }
+  .preview-card-component {
+    flex-direction: row;
+  }
+  #sedans-section {
+    border-radius: 8px 0 0 8px;
+  }
+  #luxury-section {
+    border-radius: 0 8px 8px 0;
+  }
+  button {
+    margin-top: auto;
+  }
+  button:hover {
+    color: hsla(0, 0%, 100%, 0.75);
+    background-color: inherit;
+  }
+  .attribution {
+    position: absolute;
+    bottom: 16px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
